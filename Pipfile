@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+confluent_kafka =  '>=2.3.0'
+genson = '>=1.2.0'
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

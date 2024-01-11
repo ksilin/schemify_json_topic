@@ -1,0 +1,9 @@
+{
+    "bootstrap.servers": "---pkc-xxxxx.***.confluent.cloud:9092---",
+    "group.id": "---some_group---",
+    "auto.offset.reset": "earliest",
+    "security.protocol": "SASL_SSL",
+    "sasl.mechanism": "PLAIN",
+    "sasl.username": "---",
+    "sasl.password": "---"
+}

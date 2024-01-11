@@ -25,6 +25,7 @@ def print_summary(total_messages, field_counts, field_types, field_examples):
     builder = SchemaBuilder()
     builder.add_object(field_examples)
     schema = builder.to_schema()
+    schema['required'] = [*mandatory_fields,]
     print("derived schema:")
     print(json.dumps(schema, indent=4))
 

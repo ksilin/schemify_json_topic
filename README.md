@@ -10,5 +10,5 @@
 
 ### derive schema
 
-`python schemify_topic.py --config ./ccloud.mvzwd2.props.json --topic json_raw_temp --max_msg 1000 --max-idle 3`
+`python schemify_topic.py --config ./ccloud.mvzwd2.props.json --topic json_raw_temp --max_msg 1000 --max-idle 3 --group mygroup`
 

@@ -37,6 +37,8 @@ def main(config_file, topic):
     if config_file:
         with open(config_file, 'r') as file:
             conf.update(json.load(file))
+    if args.group is not None:
+        conf['group.id'] = args.group
 
     consumer = Consumer(conf)
     consumer.subscribe([topic])
@@ -79,6 +81,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='aggregate all JSON message fields in a topic')
     parser.add_argument('--config', type=str, help='path to configuration file')
     parser.add_argument('--topic', type=str, help='the topic to analyze')
+    parser.add_argument('--group', type=str, help='the consumer group to use')
     parser.add_argument('--max_msg', type=int, default=None, help='abort analysis after this many messages')
     parser.add_argument('--max_idle', type=int, default=None, help='abort analysis if next message does not arrive in this many seconds')
     args = parser.parse_args()
